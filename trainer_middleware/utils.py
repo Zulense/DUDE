@@ -253,14 +253,20 @@ class SmoothedValue(object):
 
     @property
     def global_avg(self):
+        if self.count == 0:
+            return 0.0
         return self.total / float(self.count) # [28.739131689071655 / 1], [0.0, 0]
 
     @property
     def max(self):
+        if not self.deque:
+            return 0.0
         return max(self.deque)
 
     @property
     def value(self):
+        if not self.deque:
+            return 0.0
         return self.deque[-1]
 
     def __str__(self):
@@ -358,4 +364,45 @@ class MetricLogger(object):
 
 
 
-        
+from context_parallel import is_main_process
+def save_on_master(*args, **kwargs):
+    if is_main_process():
+        torch.save(*args, **kwargs)
+
+
+def save_model(args,
+               epoch,
+               model,
+               model_without_ddp,
+               optimizer,
+               loss_scaler,
+               model_ema=None,
+               optimizer_disc=None,
+               save_ckpt_freq=1):
+
+    output_dir = Path(args.output_dir)
+    epoch_name = str(epoch)
+
+    checkpoint_paths = [output_dir / 'checkpoint.pth']
+    if epoch == 'best':
+        checkpoint_paths = [output_dir / ('checkpoint-%s.pth' % epoch_name),]
+    elif (epoch + 1) % save_ckpt_freq == 0:
+        checkpoint_paths.append(output_dir / ('checkpoint-%s.pth' % epoch_name))
+
+    for checkpoint_path in checkpoint_paths:
+        to_save = {
+            'model': model_without_ddp.state_dict(),
+            'epoch': epoch,
+            'step': args.global_step,
+            'args': args,
+        }
+        if optimizer is not None:
+            to_save['optimizer'] = optimizer.state_dict()
+        if loss_scaler is not None:
+            to_save['scaler'] = loss_scaler.state_dict()
+        if model_ema is not None:
+            to_save['model_ema'] = model_ema.state_dict()
+        if optimizer_disc is not None:
+            to_save['optimizer_disc'] = optimizer_disc.state_dict()
+
+        save_on_master(to_save, checkpoint_path) 

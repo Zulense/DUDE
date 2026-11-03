@@ -1,0 +1,471 @@
+W1101 11:20:45.114000 969593 site-packages/torch/distributed/run.py:792] 
+W1101 11:20:45.114000 969593 site-packages/torch/distributed/run.py:792] *****************************************
+W1101 11:20:45.114000 969593 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1101 11:20:45.114000 969593 site-packages/torch/distributed/run.py:792] *****************************************
+| distributed init (rank 1): env://, gpu 1
+| distributed init (rank 0): env://, gpu 0
+[rank1]:[W1101 11:20:52.977193132 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]:[W1101 11:20:52.977195827 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+Namespace(batch_size=2, epochs=100, print_freq=40, iters_per_epoch=20000, save_ckpt_freq=20, ema_update=False, ema_decay=0.99, model_path='', model_dtype='bf16', use_context_parallel=True, context_size=2, resolution=256, max_frames=17, lpips_ckpt='/nlsasfs/home/hfgenai/mansav/z1-v2/PATH/vgg_lpips.pth', disc_start=25000, logvar_init=0.0, kl_weight=1e-12, pixelloss_weight=10.0, perceptual_weight=1.0, disc_weight=0.5, not_add_normalize=False, add_discriminator=True, opt='adamw', opt_eps=1e-08, opt_betas=[0.9, 0.95], clip_grad=1.0, weight_decay=0.001, weight_decay_end=None, lr=0.0001, lr_disc=0.0001, warmup_lr=1e-06, min_lr=1e-05, warmup_epochs=1, warmup_steps=-1, output_dir='', image_anno='', video_anno='/nlsasfs/home/hfgenai/mansav/z1-v2/annotation/class_5_math_white_board.jsonl', image_mix_ratio=0.1, device='cuda', seed=42, resume='', auto_resume=True, dist_eval=True, disable_eval=False, eval=False, start_epoch=0, global_step=0, num_workers=6, pin_mem=True, world_size=2, local_rank=-1, dist_on_itp=False, dist_url='env://', rank=0, gpu=0, distributed=True, dist_backend='nccl')
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+loaded pretrained LPIPS loss from /nlsasfs/home/hfgenai/mansav/z1-v2/PATH/vgg_lpips.pth
+The training video clip frame number is 17
+Load annotation file from /nlsasfs/home/hfgenai/mansav/z1-v2/annotation/class_5_math_white_board.jsonl
+0it [00:00, ?it/s]0it [00:00, ?it/s]719it [00:00, 4422.45it/s]1167it [00:00, 7067.46it/s]
+719it [00:00, 4170.74it/s]1167it [00:00, 6669.98it/s]
+Totally Remaind 1167 videos
+Transform List is [Resize(size=256, interpolation=bicubic, max_size=None, antialias=True), CenterCrop(size=(256, 256)), Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))]
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+<-------------------[Dataloader] video: <dataset.dataloaders.IterLoader object at 0x7f0c8d4ed480>----------------->
+loss.perceptual_loss.net.slice1.0.weight
+loss.perceptual_loss.net.slice1.0.bias
+loss.perceptual_loss.net.slice1.2.weight
+loss.perceptual_loss.net.slice1.2.bias
+loss.perceptual_loss.net.slice2.5.weight
+loss.perceptual_loss.net.slice2.5.bias
+loss.perceptual_loss.net.slice2.7.weight
+loss.perceptual_loss.net.slice2.7.bias
+loss.perceptual_loss.net.slice3.10.weight
+loss.perceptual_loss.net.slice3.10.bias
+loss.perceptual_loss.net.slice3.12.weight
+loss.perceptual_loss.net.slice3.12.bias
+loss.perceptual_loss.net.slice3.14.weight
+loss.perceptual_loss.net.slice3.14.bias
+loss.perceptual_loss.net.slice4.17.weight
+loss.perceptual_loss.net.slice4.17.bias
+loss.perceptual_loss.net.slice4.19.weight
+loss.perceptual_loss.net.slice4.19.bias
+loss.perceptual_loss.net.slice4.21.weight
+loss.perceptual_loss.net.slice4.21.bias
+loss.perceptual_loss.net.slice5.24.weight
+loss.perceptual_loss.net.slice5.24.bias
+loss.perceptual_loss.net.slice5.26.weight
+loss.perceptual_loss.net.slice5.26.bias
+loss.perceptual_loss.net.slice5.28.weight
+loss.perceptual_loss.net.slice5.28.bias
+loss.perceptual_loss.lin0.model.1.weight
+loss.perceptual_loss.lin1.model.1.weight
+loss.perceptual_loss.lin2.model.1.weight
+loss.perceptual_loss.lin3.model.1.weight
+loss.perceptual_loss.lin4.model.1.weight
+Total number of learnable params: 355.787049 M
+Total number of fixed params in : 14.71616 M
+LR = 0.00010000
+Min LR = 0.00001000
+Weight Decay = 0.00100000
+Batch size = 4
+Number of training steps = 2000000
+Number of training examples per epoch = 80000
+Skip weight decay name marked in model: {}
+Param groups = {
+  "decay": {
+    "weight_decay": 0.001,
+    "params": [
+      "encoder.conv_in.conv.weight",
+      "encoder.down_blocks.0.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.0.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.0.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.0.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.0.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.0.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv_shortcut.conv.weight",
+      "encoder.down_blocks.1.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.1.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.1.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.1.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv_shortcut.conv.weight",
+      "encoder.down_blocks.2.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.2.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.2.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.2.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.3.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.3.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.3.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.3.resnets.1.conv2.conv.weight",
+      "encoder.mid_block.attentions.0.to_q.weight",
+      "encoder.mid_block.attentions.0.to_k.weight",
+      "encoder.mid_block.attentions.0.to_v.weight",
+      "encoder.mid_block.attentions.0.to_out.0.weight",
+      "encoder.mid_block.resnets.0.conv1.conv.weight",
+      "encoder.mid_block.resnets.0.conv2.conv.weight",
+      "encoder.mid_block.resnets.1.conv1.conv.weight",
+      "encoder.mid_block.resnets.1.conv2.conv.weight",
+      "encoder.conv_out.conv.weight",
+      "decoder.conv_in.conv.weight",
+      "decoder.up_blocks.0.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.0.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.0.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.0.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.0.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.1.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.1.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.1.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.1.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.1.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv_shortcut.conv.weight",
+      "decoder.up_blocks.2.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.2.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.2.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.2.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv_shortcut.conv.weight",
+      "decoder.up_blocks.3.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.3.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.2.conv2.conv.weight",
+      "decoder.mid_block.attentions.0.to_q.weight",
+      "decoder.mid_block.attentions.0.to_k.weight",
+      "decoder.mid_block.attentions.0.to_v.weight",
+      "decoder.mid_block.attentions.0.to_out.0.weight",
+      "decoder.mid_block.resnets.0.conv1.conv.weight",
+      "decoder.mid_block.resnets.0.conv2.conv.weight",
+      "decoder.mid_block.resnets.1.conv1.conv.weight",
+      "decoder.mid_block.resnets.1.conv2.conv.weight",
+      "decoder.conv_out.conv.weight",
+      "quant_conv.conv.weight",
+      "post_quant_conv.conv.weight"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  },
+  "no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "encoder.conv_in.conv.bias",
+      "encoder.down_blocks.0.resnets.0.norm1.weight",
+      "encoder.down_blocks.0.resnets.0.norm1.bias",
+      "encoder.down_blocks.0.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.0.resnets.0.norm2.weight",
+      "encoder.down_blocks.0.resnets.0.norm2.bias",
+      "encoder.down_blocks.0.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.0.resnets.1.norm1.weight",
+      "encoder.down_blocks.0.resnets.1.norm1.bias",
+      "encoder.down_blocks.0.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.0.resnets.1.norm2.weight",
+      "encoder.down_blocks.0.resnets.1.norm2.bias",
+      "encoder.down_blocks.0.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.0.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.0.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.1.resnets.0.norm1.weight",
+      "encoder.down_blocks.1.resnets.0.norm1.bias",
+      "encoder.down_blocks.1.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.1.resnets.0.norm2.weight",
+      "encoder.down_blocks.1.resnets.0.norm2.bias",
+      "encoder.down_blocks.1.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.1.resnets.0.conv_shortcut.conv.bias",
+      "encoder.down_blocks.1.resnets.1.norm1.weight",
+      "encoder.down_blocks.1.resnets.1.norm1.bias",
+      "encoder.down_blocks.1.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.1.resnets.1.norm2.weight",
+      "encoder.down_blocks.1.resnets.1.norm2.bias",
+      "encoder.down_blocks.1.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.1.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.1.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.2.resnets.0.norm1.weight",
+      "encoder.down_blocks.2.resnets.0.norm1.bias",
+      "encoder.down_blocks.2.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.2.resnets.0.norm2.weight",
+      "encoder.down_blocks.2.resnets.0.norm2.bias",
+      "encoder.down_blocks.2.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.2.resnets.0.conv_shortcut.conv.bias",
+      "encoder.down_blocks.2.resnets.1.norm1.weight",
+      "encoder.down_blocks.2.resnets.1.norm1.bias",
+      "encoder.down_blocks.2.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.2.resnets.1.norm2.weight",
+      "encoder.down_blocks.2.resnets.1.norm2.bias",
+      "encoder.down_blocks.2.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.2.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.2.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.3.resnets.0.norm1.weight",
+      "encoder.down_blocks.3.resnets.0.norm1.bias",
+      "encoder.down_blocks.3.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.3.resnets.0.norm2.weight",
+      "encoder.down_blocks.3.resnets.0.norm2.bias",
+      "encoder.down_blocks.3.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.3.resnets.1.norm1.weight",
+      "encoder.down_blocks.3.resnets.1.norm1.bias",
+      "encoder.down_blocks.3.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.3.resnets.1.norm2.weight",
+      "encoder.down_blocks.3.resnets.1.norm2.bias",
+      "encoder.down_blocks.3.resnets.1.conv2.conv.bias",
+      "encoder.mid_block.attentions.0.group_norm.weight",
+      "encoder.mid_block.attentions.0.group_norm.bias",
+      "encoder.mid_block.attentions.0.to_q.bias",
+      "encoder.mid_block.attentions.0.to_k.bias",
+      "encoder.mid_block.attentions.0.to_v.bias",
+      "encoder.mid_block.attentions.0.to_out.0.bias",
+      "encoder.mid_block.resnets.0.norm1.weight",
+      "encoder.mid_block.resnets.0.norm1.bias",
+      "encoder.mid_block.resnets.0.conv1.conv.bias",
+      "encoder.mid_block.resnets.0.norm2.weight",
+      "encoder.mid_block.resnets.0.norm2.bias",
+      "encoder.mid_block.resnets.0.conv2.conv.bias",
+      "encoder.mid_block.resnets.1.norm1.weight",
+      "encoder.mid_block.resnets.1.norm1.bias",
+      "encoder.mid_block.resnets.1.conv1.conv.bias",
+      "encoder.mid_block.resnets.1.norm2.weight",
+      "encoder.mid_block.resnets.1.norm2.bias",
+      "encoder.mid_block.resnets.1.conv2.conv.bias",
+      "encoder.conv_norm_out.weight",
+      "encoder.conv_norm_out.bias",
+      "encoder.conv_out.conv.bias",
+      "decoder.conv_in.conv.bias",
+      "decoder.up_blocks.0.resnets.0.norm1.weight",
+      "decoder.up_blocks.0.resnets.0.norm1.bias",
+      "decoder.up_blocks.0.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.0.norm2.weight",
+      "decoder.up_blocks.0.resnets.0.norm2.bias",
+      "decoder.up_blocks.0.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.0.resnets.1.norm1.weight",
+      "decoder.up_blocks.0.resnets.1.norm1.bias",
+      "decoder.up_blocks.0.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.1.norm2.weight",
+      "decoder.up_blocks.0.resnets.1.norm2.bias",
+      "decoder.up_blocks.0.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.0.resnets.2.norm1.weight",
+      "decoder.up_blocks.0.resnets.2.norm1.bias",
+      "decoder.up_blocks.0.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.2.norm2.weight",
+      "decoder.up_blocks.0.resnets.2.norm2.bias",
+      "decoder.up_blocks.0.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.0.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.0.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.1.resnets.0.norm1.weight",
+      "decoder.up_blocks.1.resnets.0.norm1.bias",
+      "decoder.up_blocks.1.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.0.norm2.weight",
+      "decoder.up_blocks.1.resnets.0.norm2.bias",
+      "decoder.up_blocks.1.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.1.resnets.1.norm1.weight",
+      "decoder.up_blocks.1.resnets.1.norm1.bias",
+      "decoder.up_blocks.1.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.1.norm2.weight",
+      "decoder.up_blocks.1.resnets.1.norm2.bias",
+      "decoder.up_blocks.1.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.1.resnets.2.norm1.weight",
+      "decoder.up_blocks.1.resnets.2.norm1.bias",
+      "decoder.up_blocks.1.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.2.norm2.weight",
+      "decoder.up_blocks.1.resnets.2.norm2.bias",
+      "decoder.up_blocks.1.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.1.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.1.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.2.resnets.0.norm1.weight",
+      "decoder.up_blocks.2.resnets.0.norm1.bias",
+      "decoder.up_blocks.2.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.0.norm2.weight",
+      "decoder.up_blocks.2.resnets.0.norm2.bias",
+      "decoder.up_blocks.2.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.2.resnets.0.conv_shortcut.conv.bias",
+      "decoder.up_blocks.2.resnets.1.norm1.weight",
+      "decoder.up_blocks.2.resnets.1.norm1.bias",
+      "decoder.up_blocks.2.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.1.norm2.weight",
+      "decoder.up_blocks.2.resnets.1.norm2.bias",
+      "decoder.up_blocks.2.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.2.resnets.2.norm1.weight",
+      "decoder.up_blocks.2.resnets.2.norm1.bias",
+      "decoder.up_blocks.2.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.2.norm2.weight",
+      "decoder.up_blocks.2.resnets.2.norm2.bias",
+      "decoder.up_blocks.2.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.2.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.2.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.3.resnets.0.norm1.weight",
+      "decoder.up_blocks.3.resnets.0.norm1.bias",
+      "decoder.up_blocks.3.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.0.norm2.weight",
+      "decoder.up_blocks.3.resnets.0.norm2.bias",
+      "decoder.up_blocks.3.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.3.resnets.0.conv_shortcut.conv.bias",
+      "decoder.up_blocks.3.resnets.1.norm1.weight",
+      "decoder.up_blocks.3.resnets.1.norm1.bias",
+      "decoder.up_blocks.3.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.1.norm2.weight",
+      "decoder.up_blocks.3.resnets.1.norm2.bias",
+      "decoder.up_blocks.3.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.3.resnets.2.norm1.weight",
+      "decoder.up_blocks.3.resnets.2.norm1.bias",
+      "decoder.up_blocks.3.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.2.norm2.weight",
+      "decoder.up_blocks.3.resnets.2.norm2.bias",
+      "decoder.up_blocks.3.resnets.2.conv2.conv.bias",
+      "decoder.mid_block.attentions.0.group_norm.weight",
+      "decoder.mid_block.attentions.0.group_norm.bias",
+      "decoder.mid_block.attentions.0.to_q.bias",
+      "decoder.mid_block.attentions.0.to_k.bias",
+      "decoder.mid_block.attentions.0.to_v.bias",
+      "decoder.mid_block.attentions.0.to_out.0.bias",
+      "decoder.mid_block.resnets.0.norm1.weight",
+      "decoder.mid_block.resnets.0.norm1.bias",
+      "decoder.mid_block.resnets.0.conv1.conv.bias",
+      "decoder.mid_block.resnets.0.norm2.weight",
+      "decoder.mid_block.resnets.0.norm2.bias",
+      "decoder.mid_block.resnets.0.conv2.conv.bias",
+      "decoder.mid_block.resnets.1.norm1.weight",
+      "decoder.mid_block.resnets.1.norm1.bias",
+      "decoder.mid_block.resnets.1.conv1.conv.bias",
+      "decoder.mid_block.resnets.1.norm2.weight",
+      "decoder.mid_block.resnets.1.norm2.bias",
+      "decoder.mid_block.resnets.1.conv2.conv.bias",
+      "decoder.conv_norm_out.weight",
+      "decoder.conv_norm_out.bias",
+      "decoder.conv_out.conv.bias",
+      "quant_conv.conv.bias",
+      "post_quant_conv.conv.bias"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0001, 'weight_decay': 0.0, 'eps': 1e-08}
+Skip weight decay name marked in model: {}
+Param groups = {
+  "decay": {
+    "weight_decay": 0.001,
+    "params": [
+      "main.0.weight",
+      "main.2.weight",
+      "main.5.weight",
+      "main.8.weight",
+      "main.11.weight",
+      "main.14.weight"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  },
+  "no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "main.0.bias",
+      "main.2.bias",
+      "main.5.bias",
+      "main.8.bias",
+      "main.11.bias",
+      "main.14.bias"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0001, 'weight_decay': 0.0, 'eps': 1e-08}
+Set the loss scaled to False
+Set the loss scaled to False
+Use step level LR & WD scheduler!
+Set warmup steps = 20000
+Set warmup steps = 20000
+start training for 100 epochs, total global iterations is 0
+<----Epoch=0, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000000 min_lr: 0.000000 disc_lr: 0.000000 disc_min_lr: 0.000000 vae_loss: 16.1866 (16.2796) loss_scaler: 1.0000 (1.0000) disc_loss: 1.5625 (1.5391) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 22.9791 (24.3065) total_loss: 16.1866 (16.2796) logvar: 0.0000 (0.0000) kl_loss: 14.3360 (14.3360) nll_loss: 1.8604 (1.8870) rec_loss: 0.9802 (1.0092) perception_loss: 0.8789 (0.8770) d_weight: 0.3030 (0.3190) disc_factor: 1.0000 (1.0000) g_loss: -0.0325 (0.1674) logits_real: -0.3223 (-0.4541) logits_fake: 0.0325 (-0.1674) weight_decay: 0.0010 (0.0010) grad_norm: 247.8237 (247.8237)
+Training time: 0:00:51
+<----Epoch=1, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000100 min_lr: 0.000100 disc_lr: 0.000100 disc_min_lr: 0.000100 vae_loss: 15.8001 (15.9444) loss_scaler: 1.0000 (1.0000) disc_loss: 1.5625 (1.5078) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 25.2829 (27.5619) total_loss: 15.8001 (15.9444) logvar: 0.0000 (0.0000) kl_loss: 13.9170 (13.9170) nll_loss: 1.9012 (1.9293) rec_loss: 1.0254 (1.0562) perception_loss: 0.8750 (0.8730) d_weight: 0.5276 (0.5214) disc_factor: 1.0000 (1.0000) g_loss: -0.0344 (0.1908) logits_real: -0.4102 (-0.4707) logits_fake: 0.0344 (-0.1908) weight_decay: 0.0010 (0.0010) grad_norm: 233.1596 (233.1596)
+Training time: 0:00:52
+<----Epoch=2, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000100 min_lr: 0.000100 disc_lr: 0.000100 disc_min_lr: 0.000100 vae_loss: 151.9273 (151.8880) loss_scaler: 1.0000 (1.0000) disc_loss: 2.9375 (2.7656) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 30.8904 (31.1601) total_loss: 151.9273 (151.8880) logvar: 0.0000 (0.0000) kl_loss: 150.1718 (150.1718) nll_loss: 1.9152 (1.8778) rec_loss: 1.0677 (1.0243) perception_loss: 0.8477 (0.8535) d_weight: 0.0475 (0.0513) disc_factor: 1.0000 (1.0000) g_loss: -3.3594 (-3.1641) logits_real: 5.6250 (6.0781) logits_fake: 3.3594 (3.1641) weight_decay: 0.0010 (0.0010) grad_norm: 1815.6565 (1815.6565)
+Training time: 0:00:53
+<----Epoch=3, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000100 min_lr: 0.000100 disc_lr: 0.000100 disc_min_lr: 0.000100 vae_loss: 49.6685 (49.5711) loss_scaler: 1.0000 (1.0000) disc_loss: 1.1719 (1.1367) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 25.8462 (27.1986) total_loss: 49.6685 (49.5711) logvar: 0.0000 (0.0000) kl_loss: 47.6187 (47.6187) nll_loss: 2.0085 (1.9268) rec_loss: 1.1689 (1.0921) perception_loss: 0.8398 (0.8340) d_weight: 0.0654 (0.0446) disc_factor: 1.0000 (1.0000) g_loss: 0.6328 (0.5244) logits_real: 5.8750 (6.4688) logits_fake: -0.6328 (-0.5244) weight_decay: 0.0010 (0.0010) grad_norm: 655.4799 (655.4799)
+Training time: 0:00:56
+<----Epoch=4, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000100 min_lr: 0.000100 disc_lr: 0.000100 disc_min_lr: 0.000100 vae_loss: 18.6271 (18.5030) loss_scaler: 1.0000 (1.0000) disc_loss: 0.5859 (0.4531) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 17.1469 (15.7856) total_loss: 18.6271 (18.5030) logvar: 0.0000 (0.0000) kl_loss: 16.5883 (16.5883) nll_loss: 1.8401 (1.7753) rec_loss: 1.0260 (0.9676) perception_loss: 0.8125 (0.8066) d_weight: 0.0620 (0.0411) disc_factor: 1.0000 (1.0000) g_loss: 3.2031 (3.5938) logits_real: 4.8125 (5.3906) logits_fake: -3.2031 (-3.5938) weight_decay: 0.0010 (0.0010) grad_norm: 246.5278 (246.5278)
+Training time: 0:00:58
+<----Epoch=5, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000100 min_lr: 0.000100 disc_lr: 0.000100 disc_min_lr: 0.000100 vae_loss: 8.7920 (8.8082) loss_scaler: 1.0000 (1.0000) disc_loss: 1.8750 (1.3184) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 32.0052 (30.3932) total_loss: 8.7920 (8.8082) logvar: 0.0000 (0.0000) kl_loss: 7.3875 (7.3875) nll_loss: 1.4842 (1.4557) rec_loss: 0.6886 (0.6666) perception_loss: 0.7969 (0.7891) d_weight: 0.0448 (0.0272) disc_factor: 1.0000 (1.0000) g_loss: -1.7812 (-0.3926) logits_real: 4.6250 (5.3906) logits_fake: 1.7812 (0.3926) weight_decay: 0.0010 (0.0010) grad_norm: 147.9685 (147.9685)
+Training time: 0:01:02
+<----Epoch=6, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000099 min_lr: 0.000099 disc_lr: 0.000099 disc_min_lr: 0.000099 vae_loss: 6.7767 (6.8975) loss_scaler: 1.0000 (1.0000) disc_loss: 2.9844 (2.5703) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 35.5523 (38.5370) total_loss: 6.7767 (6.8975) logvar: 0.0000 (0.0000) kl_loss: 5.3233 (5.3233) nll_loss: 1.8730 (1.8184) rec_loss: 1.0687 (1.0234) perception_loss: 0.8047 (0.7949) d_weight: 0.1009 (0.0659) disc_factor: 1.0000 (1.0000) g_loss: -4.1562 (-3.1953) logits_real: 3.2500 (3.7969) logits_fake: 4.1562 (3.1953) weight_decay: 0.0010 (0.0010) grad_norm: 125.2178 (125.2178)
+Training time: 0:01:05
+<----Epoch=7, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000099 min_lr: 0.000099 disc_lr: 0.000099 disc_min_lr: 0.000099 vae_loss: 6.7854 (6.7713) loss_scaler: 1.0000 (1.0000) disc_loss: 3.5625 (3.6953) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 36.9191 (40.8484) total_loss: 6.7854 (6.7713) logvar: 0.0000 (0.0000) kl_loss: 5.5442 (5.5442) nll_loss: 1.5009 (1.4537) rec_loss: 0.7225 (0.6785) perception_loss: 0.7773 (0.7754) d_weight: 0.0480 (0.0403) disc_factor: 1.0000 (1.0000) g_loss: -5.4062 (-5.6719) logits_real: 3.1406 (3.2422) logits_fake: 5.4062 (5.6719) weight_decay: 0.0010 (0.0010) grad_norm: 102.3643 (102.3643)
+Training time: 0:01:10
+<----Epoch=8, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000099 min_lr: 0.000099 disc_lr: 0.000099 disc_min_lr: 0.000099 vae_loss: 6.7626 (6.7364) loss_scaler: 1.0000 (1.0000) disc_loss: 3.1875 (3.5391) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 36.6621 (41.8529) total_loss: 6.7626 (6.7364) logvar: 0.0000 (0.0000) kl_loss: 5.3334 (5.3334) nll_loss: 1.5556 (1.5160) rec_loss: 0.8009 (0.7567) perception_loss: 0.7539 (0.7598) d_weight: 0.0311 (0.0245) disc_factor: 1.0000 (1.0000) g_loss: -4.0625 (-4.8281) logits_real: 1.8281 (1.7227) logits_fake: 4.0625 (4.8281) weight_decay: 0.0010 (0.0010) grad_norm: 151.3662 (151.3662)
+Training time: 0:01:14
+<----Epoch=9, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000099 min_lr: 0.000099 disc_lr: 0.000099 disc_min_lr: 0.000099 vae_loss: 4.7957 (4.7775) loss_scaler: 1.0000 (1.0000) disc_loss: 1.9531 (2.2109) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 35.9942 (41.5312) total_loss: 4.7957 (4.7775) logvar: 0.0000 (0.0000) kl_loss: 3.3440 (3.3440) nll_loss: 1.4925 (1.4765) rec_loss: 0.7360 (0.7160) perception_loss: 0.7578 (0.7617) d_weight: 0.0262 (0.0212) disc_factor: 1.0000 (1.0000) g_loss: -1.5547 (-2.1680) logits_real: 1.4609 (1.2852) logits_fake: 1.5547 (2.1680) weight_decay: 0.0010 (0.0010) grad_norm: 94.5493 (94.5493)
+Training time: 0:01:17
+<----Epoch=10, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000098 min_lr: 0.000098 disc_lr: 0.000098 disc_min_lr: 0.000098 vae_loss: 3.5535 (3.5433) loss_scaler: 1.0000 (1.0000) disc_loss: 1.1172 (1.3047) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 33.6714 (35.8752) total_loss: 3.5535 (3.5433) logvar: 0.0000 (0.0000) kl_loss: 2.1304 (2.1304) nll_loss: 1.4431 (1.4366) rec_loss: 0.6903 (0.6750) perception_loss: 0.7539 (0.7617) d_weight: 0.0478 (0.0419) disc_factor: 1.0000 (1.0000) g_loss: -0.4180 (-0.5879) logits_real: 2.1875 (1.8711) logits_fake: 0.4180 (0.5879) weight_decay: 0.0010 (0.0010) grad_norm: 59.9213 (59.9213)
+Training time: 0:01:20
+<----Epoch=11, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000098 min_lr: 0.000098 disc_lr: 0.000098 disc_min_lr: 0.000098 vae_loss: 4.9611 (4.9692) loss_scaler: 1.0000 (1.0000) disc_loss: 1.1250 (1.3438) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 30.7443 (35.2858) total_loss: 4.9611 (4.9692) logvar: 0.0000 (0.0000) kl_loss: 3.5755 (3.5755) nll_loss: 1.3896 (1.4014) rec_loss: 0.6398 (0.6484) perception_loss: 0.7500 (0.7539) d_weight: 0.0208 (0.0183) disc_factor: 1.0000 (1.0000) g_loss: -0.1943 (-0.4604) logits_real: 1.1719 (0.8965) logits_fake: 0.1943 (0.4604) weight_decay: 0.0010 (0.0010) grad_norm: 109.9864 (109.9864)
+Training time: 0:01:23
+<----Epoch=12, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000097 min_lr: 0.000097 disc_lr: 0.000097 disc_min_lr: 0.000097 vae_loss: 4.1706 (4.1646) loss_scaler: 1.0000 (1.0000) disc_loss: 0.6680 (0.9004) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 21.1408 (27.4268) total_loss: 4.1706 (4.1646) logvar: 0.0000 (0.0000) kl_loss: 2.7791 (2.7791) nll_loss: 1.3146 (1.3363) rec_loss: 0.5591 (0.5780) perception_loss: 0.7539 (0.7578) d_weight: 0.0357 (0.0261) disc_factor: 1.0000 (1.0000) g_loss: 2.1562 (1.7305) logits_real: 0.8516 (0.4366) logits_fake: -2.1562 (-1.7305) weight_decay: 0.0010 (0.0010) grad_norm: 73.2038 (73.2038)
+Training time: 0:01:25
+<----Epoch=13, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+Average stats:  lr: 0.000097 min_lr: 0.000097 disc_lr: 0.000097 disc_min_lr: 0.000097 vae_loss: 2.8413 (2.8550) loss_scaler: 1.0000 (1.0000) disc_loss: 0.7031 (0.7852) disc_loss_scale: 1.0000 (1.0000) disc_grad_norm: 24.6274 (29.9799) total_loss: 2.8413 (2.8550) logvar: 0.0000 (0.0000) kl_loss: 1.4701 (1.4701) nll_loss: 1.3285 (1.3465) rec_loss: 0.5785 (0.5881) perception_loss: 0.7500 (0.7578) d_weight: 0.0225 (0.0192) disc_factor: 1.0000 (1.0000) g_loss: 1.8984 (2.0195) logits_real: 0.8320 (0.5713) logits_fake: -1.8984 (-2.0195) weight_decay: 0.0010 (0.0010) grad_norm: 52.5648 (52.5648)
+Training time: 0:01:28
+<----Epoch=14, step=0, iters_per_epoch=20000---->
+[code is working...]
+<----- what is the shape of video=torch.Size([2, 3, 17, 256, 256]) ------>
+video are found.
+slurmstepd: error: *** JOB 546170 ON scn26-10g CANCELLED AT 2026-11-01T11:23:21 ***

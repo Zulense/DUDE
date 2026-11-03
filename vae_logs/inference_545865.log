@@ -1,0 +1,149 @@
+W1030 14:32:12.040000 1904554 site-packages/torch/distributed/run.py:792] 
+W1030 14:32:12.040000 1904554 site-packages/torch/distributed/run.py:792] *****************************************
+W1030 14:32:12.040000 1904554 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1030 14:32:12.040000 1904554 site-packages/torch/distributed/run.py:792] *****************************************
+usage: Pytorch Multi-process Training script for Video VAE
+                                                           [--batch_size BATCH_SIZE]
+                                                           [--epochs EPOCHS]
+                                                           [--print_freq PRINT_FREQ]
+                                                           [--iters_per_epoch ITERS_PER_EPOCH]
+                                                           [--save_ckpt_freq SAVE_CKPT_FREQ]
+                                                           [--ema_update]
+                                                           [--ema_decay MODEL]
+                                                           [--model_path MODEL_PATH]
+                                                           [--model_dtype MODEL_DTYPE]
+                                                           [--use_context_parallel]
+                                                           [--context_size CONTEXT_SIZE]
+                                                           [--resolution RESOLUTION]
+                                                           [--max_frames MAX_FRAMES]
+                                                           [--lpips_ckpt LPIPS_CKPT]
+                                                           [--disc_start DISC_START]
+                                                           [--logvar_init LOGVAR_INIT]
+                                                           [--kl_weight KL_WEIGHT]
+                                                           [--pixelloss_weight PIXELLOSS_WEIGHT]
+                                                           [--perceptual_weight PERCEPTUAL_WEIGHT]
+                                                           [--disc_weight DISC_WEIGHT]
+                                                           [--not_add_normalize]
+                                                           [--add_discriminator]
+                                                           [--opt OPTIMIZER]
+                                                           [--opt_eps EPSILON]
+                                                           [--opt_betas BETA [BETA ...]]
+                                                           [--clip_grad NORM]
+                                                           [--weight_decay WEIGHT_DECAY]
+                                                           [--weight_decay_end WEIGHT_DECAY_END]
+                                                           [--lr LR]
+                                                           [--lr_disc LR]
+                                                           [--warmup_lr LR]
+                                                           [--min_lr LR]
+                                                           [--warmup_epochs N]
+                                                           [--warmup_steps N]
+                                                           [--output_dir OUTPUT_DIR]
+                                                           [--image_anno IMAGE_ANNO]
+                                                           [--video_anno VIDEO_ANNO]
+                                                           [--image_mix_ratio IMAGE_MIX_RATIO]
+                                                           [--device DEVICE]
+                                                           [--seed SEED]
+                                                           [--resume RESUME]
+                                                           [--auto_resume]
+                                                           [--no_auto_resume]
+                                                           [--dist_eval]
+                                                           [--disable_eval]
+                                                           [--eval]
+                                                           [--start_epoch N]
+                                                           [--global_step N]
+                                                           [--num_workers NUM_WORKERS]
+                                                           [--pin_mem]
+                                                           [--no_pin_mem]
+                                                           [--world_size WORLD_SIZE]
+                                                           [--local_rank LOCAL_RANK]
+                                                           [--dist_on_itp]
+                                                           [--dist_url DIST_URL]
+Pytorch Multi-process Training script for Video VAE: error: unrecognized arguments:  
+usage: Pytorch Multi-process Training script for Video VAE
+                                                           [--batch_size BATCH_SIZE]
+                                                           [--epochs EPOCHS]
+                                                           [--print_freq PRINT_FREQ]
+                                                           [--iters_per_epoch ITERS_PER_EPOCH]
+                                                           [--save_ckpt_freq SAVE_CKPT_FREQ]
+                                                           [--ema_update]
+                                                           [--ema_decay MODEL]
+                                                           [--model_path MODEL_PATH]
+                                                           [--model_dtype MODEL_DTYPE]
+                                                           [--use_context_parallel]
+                                                           [--context_size CONTEXT_SIZE]
+                                                           [--resolution RESOLUTION]
+                                                           [--max_frames MAX_FRAMES]
+                                                           [--lpips_ckpt LPIPS_CKPT]
+                                                           [--disc_start DISC_START]
+                                                           [--logvar_init LOGVAR_INIT]
+                                                           [--kl_weight KL_WEIGHT]
+                                                           [--pixelloss_weight PIXELLOSS_WEIGHT]
+                                                           [--perceptual_weight PERCEPTUAL_WEIGHT]
+                                                           [--disc_weight DISC_WEIGHT]
+                                                           [--not_add_normalize]
+                                                           [--add_discriminator]
+                                                           [--opt OPTIMIZER]
+                                                           [--opt_eps EPSILON]
+                                                           [--opt_betas BETA [BETA ...]]
+                                                           [--clip_grad NORM]
+                                                           [--weight_decay WEIGHT_DECAY]
+                                                           [--weight_decay_end WEIGHT_DECAY_END]
+                                                           [--lr LR]
+                                                           [--lr_disc LR]
+                                                           [--warmup_lr LR]
+                                                           [--min_lr LR]
+                                                           [--warmup_epochs N]
+                                                           [--warmup_steps N]
+                                                           [--output_dir OUTPUT_DIR]
+                                                           [--image_anno IMAGE_ANNO]
+                                                           [--video_anno VIDEO_ANNO]
+                                                           [--image_mix_ratio IMAGE_MIX_RATIO]
+                                                           [--device DEVICE]
+                                                           [--seed SEED]
+                                                           [--resume RESUME]
+                                                           [--auto_resume]
+                                                           [--no_auto_resume]
+                                                           [--dist_eval]
+                                                           [--disable_eval]
+                                                           [--eval]
+                                                           [--start_epoch N]
+                                                           [--global_step N]
+                                                           [--num_workers NUM_WORKERS]
+                                                           [--pin_mem]
+                                                           [--no_pin_mem]
+                                                           [--world_size WORLD_SIZE]
+                                                           [--local_rank LOCAL_RANK]
+                                                           [--dist_on_itp]
+                                                           [--dist_url DIST_URL]
+Pytorch Multi-process Training script for Video VAE: error: unrecognized arguments:  
+W1030 14:32:22.671000 1904554 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1904620 closing signal SIGTERM
+E1030 14:32:22.835000 1904554 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 2) local_rank: 1 (pid: 1904621) of binary: /nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/bin/python3.10
+Traceback (most recent call last):
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train/pyramid_train_video_vae.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-30_14:32:22
+  host      : scn42-mn.mgmt.siddhi.param
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 1904621)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

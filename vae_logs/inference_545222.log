@@ -1,0 +1,49 @@
+W1028 15:45:37.512000 231578 site-packages/torch/distributed/run.py:792] 
+W1028 15:45:37.512000 231578 site-packages/torch/distributed/run.py:792] *****************************************
+W1028 15:45:37.512000 231578 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1028 15:45:37.512000 231578 site-packages/torch/distributed/run.py:792] *****************************************
+Traceback (most recent call last):
+  File "/nlsasfs/home/hfgenai/mansav/z1-v2/train/pyramid_train_video_vae.py", line 19, in <module>
+    from trainer_middleware.vae_ddp_trainer import train_one_epoch
+  File "/nlsasfs/home/hfgenai/mansav/z1-v2/trainer_middleware/vae_ddp_trainer.py", line 74
+    print(f"<----------------- optimizer is_second_order={is_second_order} ------------->"}
+                                                                                          ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+Traceback (most recent call last):
+  File "/nlsasfs/home/hfgenai/mansav/z1-v2/train/pyramid_train_video_vae.py", line 19, in <module>
+    from trainer_middleware.vae_ddp_trainer import train_one_epoch
+  File "/nlsasfs/home/hfgenai/mansav/z1-v2/trainer_middleware/vae_ddp_trainer.py", line 74
+    print(f"<----------------- optimizer is_second_order={is_second_order} ------------->"}
+                                                                                          ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+W1028 15:45:50.748000 231578 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 231628 closing signal SIGTERM
+E1028 15:45:50.963000 231578 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 231629) of binary: /nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/bin/python3.10
+Traceback (most recent call last):
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train/pyramid_train_video_vae.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-28_15:45:50
+  host      : scn62-mn
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 231629)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

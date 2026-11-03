@@ -1,0 +1,473 @@
+W1028 15:29:18.186000 210980 site-packages/torch/distributed/run.py:792] 
+W1028 15:29:18.186000 210980 site-packages/torch/distributed/run.py:792] *****************************************
+W1028 15:29:18.186000 210980 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1028 15:29:18.186000 210980 site-packages/torch/distributed/run.py:792] *****************************************
+| distributed init (rank 1): env://, gpu 1| distributed init (rank 0): env://, gpu 0
+
+[rank1]:[W1028 15:30:16.844797066 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]:[W1028 15:30:16.844797246 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+loaded pretrained LPIPS loss from /nlsasfs/home/hfgenai/mansav/z1-v2/PATH/vgg_lpips.pth
+The training video clip frame number is 17
+Load annotation file from /nlsasfs/home/hfgenai/mansav/z1-v2/annotation/class_5_math_white_board.jsonl
+0it [00:00, ?it/s]0it [00:00, ?it/s]676it [00:00, 4264.71it/s]1167it [00:00, 7234.46it/s]
+Totally Remaind 1167 videos
+Transform List is [Resize(size=256, interpolation=bicubic, max_size=None, antialias=True), CenterCrop(size=(256, 256)), Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))]
+676it [00:00, 4025.26it/s]1167it [00:00, 6841.56it/s]
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/nlsasfs/home/hfgenai/mansav/miniconda3/envs/cuda12.4/lib/python3.10/site-packages/torch/utils/data/dataloader.py:624: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+<-------------------[Dataloader] video: <dataset.dataloaders.IterLoader object at 0x7f6731732980>----------------->
+loss.perceptual_loss.net.slice1.0.weight
+loss.perceptual_loss.net.slice1.0.bias
+loss.perceptual_loss.net.slice1.2.weight
+loss.perceptual_loss.net.slice1.2.bias
+loss.perceptual_loss.net.slice2.5.weight
+loss.perceptual_loss.net.slice2.5.bias
+loss.perceptual_loss.net.slice2.7.weight
+loss.perceptual_loss.net.slice2.7.bias
+loss.perceptual_loss.net.slice3.10.weight
+loss.perceptual_loss.net.slice3.10.bias
+loss.perceptual_loss.net.slice3.12.weight
+loss.perceptual_loss.net.slice3.12.bias
+loss.perceptual_loss.net.slice3.14.weight
+loss.perceptual_loss.net.slice3.14.bias
+loss.perceptual_loss.net.slice4.17.weight
+loss.perceptual_loss.net.slice4.17.bias
+loss.perceptual_loss.net.slice4.19.weight
+loss.perceptual_loss.net.slice4.19.bias
+loss.perceptual_loss.net.slice4.21.weight
+loss.perceptual_loss.net.slice4.21.bias
+loss.perceptual_loss.net.slice5.24.weight
+loss.perceptual_loss.net.slice5.24.bias
+loss.perceptual_loss.net.slice5.26.weight
+loss.perceptual_loss.net.slice5.26.bias
+loss.perceptual_loss.net.slice5.28.weight
+loss.perceptual_loss.net.slice5.28.bias
+loss.perceptual_loss.lin0.model.1.weight
+loss.perceptual_loss.lin1.model.1.weight
+loss.perceptual_loss.lin2.model.1.weight
+loss.perceptual_loss.lin3.model.1.weight
+loss.perceptual_loss.lin4.model.1.weight
+Total number of learnable params: 355.787049 M
+Total number of fixed params in : 14.71616 M
+LR = 0.00010000
+Min LR = 0.00001000
+Weight Decay = 0.00100000
+Batch size = 4
+Number of training steps = 2000000
+Number of training examples per epoch = 80000
+Skip weight decay name marked in model: {}
+Param groups = {
+  "decay": {
+    "weight_decay": 0.001,
+    "params": [
+      "encoder.conv_in.conv.weight",
+      "encoder.down_blocks.0.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.0.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.0.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.0.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.0.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.0.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.1.resnets.0.conv_shortcut.conv.weight",
+      "encoder.down_blocks.1.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.1.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.1.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.1.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.2.resnets.0.conv_shortcut.conv.weight",
+      "encoder.down_blocks.2.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.2.resnets.1.conv2.conv.weight",
+      "encoder.down_blocks.2.downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.2.temporal_downsamplers.0.conv.conv.weight",
+      "encoder.down_blocks.3.resnets.0.conv1.conv.weight",
+      "encoder.down_blocks.3.resnets.0.conv2.conv.weight",
+      "encoder.down_blocks.3.resnets.1.conv1.conv.weight",
+      "encoder.down_blocks.3.resnets.1.conv2.conv.weight",
+      "encoder.mid_block.attentions.0.to_q.weight",
+      "encoder.mid_block.attentions.0.to_k.weight",
+      "encoder.mid_block.attentions.0.to_v.weight",
+      "encoder.mid_block.attentions.0.to_out.0.weight",
+      "encoder.mid_block.resnets.0.conv1.conv.weight",
+      "encoder.mid_block.resnets.0.conv2.conv.weight",
+      "encoder.mid_block.resnets.1.conv1.conv.weight",
+      "encoder.mid_block.resnets.1.conv2.conv.weight",
+      "encoder.conv_out.conv.weight",
+      "decoder.conv_in.conv.weight",
+      "decoder.up_blocks.0.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.0.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.0.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.0.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.0.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.0.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.1.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.1.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.1.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.1.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.1.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.1.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.2.resnets.0.conv_shortcut.conv.weight",
+      "decoder.up_blocks.2.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.2.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.2.resnets.2.conv2.conv.weight",
+      "decoder.up_blocks.2.upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.2.temporal_upsamplers.0.conv.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv2.conv.weight",
+      "decoder.up_blocks.3.resnets.0.conv_shortcut.conv.weight",
+      "decoder.up_blocks.3.resnets.1.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.1.conv2.conv.weight",
+      "decoder.up_blocks.3.resnets.2.conv1.conv.weight",
+      "decoder.up_blocks.3.resnets.2.conv2.conv.weight",
+      "decoder.mid_block.attentions.0.to_q.weight",
+      "decoder.mid_block.attentions.0.to_k.weight",
+      "decoder.mid_block.attentions.0.to_v.weight",
+      "decoder.mid_block.attentions.0.to_out.0.weight",
+      "decoder.mid_block.resnets.0.conv1.conv.weight",
+      "decoder.mid_block.resnets.0.conv2.conv.weight",
+      "decoder.mid_block.resnets.1.conv1.conv.weight",
+      "decoder.mid_block.resnets.1.conv2.conv.weight",
+      "decoder.conv_out.conv.weight",
+      "quant_conv.conv.weight",
+      "post_quant_conv.conv.weight"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  },
+  "no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "encoder.conv_in.conv.bias",
+      "encoder.down_blocks.0.resnets.0.norm1.weight",
+      "encoder.down_blocks.0.resnets.0.norm1.bias",
+      "encoder.down_blocks.0.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.0.resnets.0.norm2.weight",
+      "encoder.down_blocks.0.resnets.0.norm2.bias",
+      "encoder.down_blocks.0.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.0.resnets.1.norm1.weight",
+      "encoder.down_blocks.0.resnets.1.norm1.bias",
+      "encoder.down_blocks.0.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.0.resnets.1.norm2.weight",
+      "encoder.down_blocks.0.resnets.1.norm2.bias",
+      "encoder.down_blocks.0.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.0.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.0.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.1.resnets.0.norm1.weight",
+      "encoder.down_blocks.1.resnets.0.norm1.bias",
+      "encoder.down_blocks.1.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.1.resnets.0.norm2.weight",
+      "encoder.down_blocks.1.resnets.0.norm2.bias",
+      "encoder.down_blocks.1.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.1.resnets.0.conv_shortcut.conv.bias",
+      "encoder.down_blocks.1.resnets.1.norm1.weight",
+      "encoder.down_blocks.1.resnets.1.norm1.bias",
+      "encoder.down_blocks.1.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.1.resnets.1.norm2.weight",
+      "encoder.down_blocks.1.resnets.1.norm2.bias",
+      "encoder.down_blocks.1.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.1.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.1.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.2.resnets.0.norm1.weight",
+      "encoder.down_blocks.2.resnets.0.norm1.bias",
+      "encoder.down_blocks.2.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.2.resnets.0.norm2.weight",
+      "encoder.down_blocks.2.resnets.0.norm2.bias",
+      "encoder.down_blocks.2.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.2.resnets.0.conv_shortcut.conv.bias",
+      "encoder.down_blocks.2.resnets.1.norm1.weight",
+      "encoder.down_blocks.2.resnets.1.norm1.bias",
+      "encoder.down_blocks.2.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.2.resnets.1.norm2.weight",
+      "encoder.down_blocks.2.resnets.1.norm2.bias",
+      "encoder.down_blocks.2.resnets.1.conv2.conv.bias",
+      "encoder.down_blocks.2.downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.2.temporal_downsamplers.0.conv.conv.bias",
+      "encoder.down_blocks.3.resnets.0.norm1.weight",
+      "encoder.down_blocks.3.resnets.0.norm1.bias",
+      "encoder.down_blocks.3.resnets.0.conv1.conv.bias",
+      "encoder.down_blocks.3.resnets.0.norm2.weight",
+      "encoder.down_blocks.3.resnets.0.norm2.bias",
+      "encoder.down_blocks.3.resnets.0.conv2.conv.bias",
+      "encoder.down_blocks.3.resnets.1.norm1.weight",
+      "encoder.down_blocks.3.resnets.1.norm1.bias",
+      "encoder.down_blocks.3.resnets.1.conv1.conv.bias",
+      "encoder.down_blocks.3.resnets.1.norm2.weight",
+      "encoder.down_blocks.3.resnets.1.norm2.bias",
+      "encoder.down_blocks.3.resnets.1.conv2.conv.bias",
+      "encoder.mid_block.attentions.0.group_norm.weight",
+      "encoder.mid_block.attentions.0.group_norm.bias",
+      "encoder.mid_block.attentions.0.to_q.bias",
+      "encoder.mid_block.attentions.0.to_k.bias",
+      "encoder.mid_block.attentions.0.to_v.bias",
+      "encoder.mid_block.attentions.0.to_out.0.bias",
+      "encoder.mid_block.resnets.0.norm1.weight",
+      "encoder.mid_block.resnets.0.norm1.bias",
+      "encoder.mid_block.resnets.0.conv1.conv.bias",
+      "encoder.mid_block.resnets.0.norm2.weight",
+      "encoder.mid_block.resnets.0.norm2.bias",
+      "encoder.mid_block.resnets.0.conv2.conv.bias",
+      "encoder.mid_block.resnets.1.norm1.weight",
+      "encoder.mid_block.resnets.1.norm1.bias",
+      "encoder.mid_block.resnets.1.conv1.conv.bias",
+      "encoder.mid_block.resnets.1.norm2.weight",
+      "encoder.mid_block.resnets.1.norm2.bias",
+      "encoder.mid_block.resnets.1.conv2.conv.bias",
+      "encoder.conv_norm_out.weight",
+      "encoder.conv_norm_out.bias",
+      "encoder.conv_out.conv.bias",
+      "decoder.conv_in.conv.bias",
+      "decoder.up_blocks.0.resnets.0.norm1.weight",
+      "decoder.up_blocks.0.resnets.0.norm1.bias",
+      "decoder.up_blocks.0.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.0.norm2.weight",
+      "decoder.up_blocks.0.resnets.0.norm2.bias",
+      "decoder.up_blocks.0.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.0.resnets.1.norm1.weight",
+      "decoder.up_blocks.0.resnets.1.norm1.bias",
+      "decoder.up_blocks.0.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.1.norm2.weight",
+      "decoder.up_blocks.0.resnets.1.norm2.bias",
+      "decoder.up_blocks.0.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.0.resnets.2.norm1.weight",
+      "decoder.up_blocks.0.resnets.2.norm1.bias",
+      "decoder.up_blocks.0.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.0.resnets.2.norm2.weight",
+      "decoder.up_blocks.0.resnets.2.norm2.bias",
+      "decoder.up_blocks.0.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.0.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.0.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.1.resnets.0.norm1.weight",
+      "decoder.up_blocks.1.resnets.0.norm1.bias",
+      "decoder.up_blocks.1.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.0.norm2.weight",
+      "decoder.up_blocks.1.resnets.0.norm2.bias",
+      "decoder.up_blocks.1.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.1.resnets.1.norm1.weight",
+      "decoder.up_blocks.1.resnets.1.norm1.bias",
+      "decoder.up_blocks.1.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.1.norm2.weight",
+      "decoder.up_blocks.1.resnets.1.norm2.bias",
+      "decoder.up_blocks.1.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.1.resnets.2.norm1.weight",
+      "decoder.up_blocks.1.resnets.2.norm1.bias",
+      "decoder.up_blocks.1.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.1.resnets.2.norm2.weight",
+      "decoder.up_blocks.1.resnets.2.norm2.bias",
+      "decoder.up_blocks.1.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.1.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.1.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.2.resnets.0.norm1.weight",
+      "decoder.up_blocks.2.resnets.0.norm1.bias",
+      "decoder.up_blocks.2.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.0.norm2.weight",
+      "decoder.up_blocks.2.resnets.0.norm2.bias",
+      "decoder.up_blocks.2.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.2.resnets.0.conv_shortcut.conv.bias",
+      "decoder.up_blocks.2.resnets.1.norm1.weight",
+      "decoder.up_blocks.2.resnets.1.norm1.bias",
+      "decoder.up_blocks.2.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.1.norm2.weight",
+      "decoder.up_blocks.2.resnets.1.norm2.bias",
+      "decoder.up_blocks.2.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.2.resnets.2.norm1.weight",
+      "decoder.up_blocks.2.resnets.2.norm1.bias",
+      "decoder.up_blocks.2.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.2.resnets.2.norm2.weight",
+      "decoder.up_blocks.2.resnets.2.norm2.bias",
+      "decoder.up_blocks.2.resnets.2.conv2.conv.bias",
+      "decoder.up_blocks.2.upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.2.temporal_upsamplers.0.conv.conv.bias",
+      "decoder.up_blocks.3.resnets.0.norm1.weight",
+      "decoder.up_blocks.3.resnets.0.norm1.bias",
+      "decoder.up_blocks.3.resnets.0.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.0.norm2.weight",
+      "decoder.up_blocks.3.resnets.0.norm2.bias",
+      "decoder.up_blocks.3.resnets.0.conv2.conv.bias",
+      "decoder.up_blocks.3.resnets.0.conv_shortcut.conv.bias",
+      "decoder.up_blocks.3.resnets.1.norm1.weight",
+      "decoder.up_blocks.3.resnets.1.norm1.bias",
+      "decoder.up_blocks.3.resnets.1.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.1.norm2.weight",
+      "decoder.up_blocks.3.resnets.1.norm2.bias",
+      "decoder.up_blocks.3.resnets.1.conv2.conv.bias",
+      "decoder.up_blocks.3.resnets.2.norm1.weight",
+      "decoder.up_blocks.3.resnets.2.norm1.bias",
+      "decoder.up_blocks.3.resnets.2.conv1.conv.bias",
+      "decoder.up_blocks.3.resnets.2.norm2.weight",
+      "decoder.up_blocks.3.resnets.2.norm2.bias",
+      "decoder.up_blocks.3.resnets.2.conv2.conv.bias",
+      "decoder.mid_block.attentions.0.group_norm.weight",
+      "decoder.mid_block.attentions.0.group_norm.bias",
+      "decoder.mid_block.attentions.0.to_q.bias",
+      "decoder.mid_block.attentions.0.to_k.bias",
+      "decoder.mid_block.attentions.0.to_v.bias",
+      "decoder.mid_block.attentions.0.to_out.0.bias",
+      "decoder.mid_block.resnets.0.norm1.weight",
+      "decoder.mid_block.resnets.0.norm1.bias",
+      "decoder.mid_block.resnets.0.conv1.conv.bias",
+      "decoder.mid_block.resnets.0.norm2.weight",
+      "decoder.mid_block.resnets.0.norm2.bias",
+      "decoder.mid_block.resnets.0.conv2.conv.bias",
+      "decoder.mid_block.resnets.1.norm1.weight",
+      "decoder.mid_block.resnets.1.norm1.bias",
+      "decoder.mid_block.resnets.1.conv1.conv.bias",
+      "decoder.mid_block.resnets.1.norm2.weight",
+      "decoder.mid_block.resnets.1.norm2.bias",
+      "decoder.mid_block.resnets.1.conv2.conv.bias",
+      "decoder.conv_norm_out.weight",
+      "decoder.conv_norm_out.bias",
+      "decoder.conv_out.conv.bias",
+      "quant_conv.conv.bias",
+      "post_quant_conv.conv.bias"
+    ],
+    "lr": 0.0001,
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0001, 'weight_decay': 0.0, 'eps': 1e-08}
+Set the loss scaled to False
+Use step level LR & WD scheduler!
+Set warmup steps = 20000
+start training for 100 epochs, total global iterations is 0
+Start training epoch 0, 20000 iters per inner epoch.
+video are found.
+<---------------> rec_loss=16.188894271850586, gan_loss=1.5625, rec_log={'train/total_loss': tensor(16.1889, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.3382, device='cuda:0'), 'train/nll_loss': tensor(1.8604, device='cuda:0'), 'train/rec_loss': tensor(0.9802, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3039, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0320, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3223, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0320, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.803621292114258, gan_loss=1.5625, rec_log={'train/total_loss': tensor(15.8036, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.9198, device='cuda:0'), 'train/nll_loss': tensor(1.9014, device='cuda:0'), 'train/rec_loss': tensor(1.0254, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5228, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0337, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4102, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0337, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.15180778503418, gan_loss=1.625, rec_log={'train/total_loss': tensor(16.1518, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.2957, device='cuda:0'), 'train/nll_loss': tensor(1.8702, device='cuda:0'), 'train/rec_loss': tensor(0.9861, device='cuda:0'), 'train/perception_loss': tensor(0.8828, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3625, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0388, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6250, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4824, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0388, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.428607940673828, gan_loss=1.609375, rec_log={'train/total_loss': tensor(15.4286, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.5732, device='cuda:0'), 'train/nll_loss': tensor(1.8737, device='cuda:0'), 'train/rec_loss': tensor(0.9995, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2964, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0618, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6094, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3633, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0618, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.987692832946777, gan_loss=1.59375, rec_log={'train/total_loss': tensor(15.9877, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.1551, device='cuda:0'), 'train/nll_loss': tensor(1.8456, device='cuda:0'), 'train/rec_loss': tensor(0.9695, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3102, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0420, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2578, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0420, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.660497665405273, gan_loss=1.515625, rec_log={'train/total_loss': tensor(16.6605, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.8835, device='cuda:0'), 'train/nll_loss': tensor(1.7941, device='cuda:0'), 'train/rec_loss': tensor(0.9267, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3964, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0432, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5156, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1445, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0432, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.556865692138672, gan_loss=1.5390625, rec_log={'train/total_loss': tensor(15.5569, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6453, device='cuda:0'), 'train/nll_loss': tensor(1.9136, device='cuda:0'), 'train/rec_loss': tensor(1.0404, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2575, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0081, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5391, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1167, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0081, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.37525177001953, gan_loss=1.546875, rec_log={'train/total_loss': tensor(16.3753, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.6059, device='cuda:0'), 'train/nll_loss': tensor(1.8050, device='cuda:0'), 'train/rec_loss': tensor(0.9380, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4291, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0830, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3379, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0830, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.25496482849121, gan_loss=1.59375, rec_log={'train/total_loss': tensor(16.2550, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.4961, device='cuda:0'), 'train/nll_loss': tensor(1.7864, device='cuda:0'), 'train/rec_loss': tensor(0.9251, device='cuda:0'), 'train/perception_loss': tensor(0.8594, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2911, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0947, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2676, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0947, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.287595748901367, gan_loss=1.46875, rec_log={'train/total_loss': tensor(16.2876, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.4896, device='cuda:0'), 'train/nll_loss': tensor(1.7928, device='cuda:0'), 'train/rec_loss': tensor(0.9248, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3055, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(0.0170, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.4688, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1348, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(-0.0170, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.79094409942627, gan_loss=1.5, rec_log={'train/total_loss': tensor(15.7909, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.8705, device='cuda:0'), 'train/nll_loss': tensor(1.9189, device='cuda:0'), 'train/rec_loss': tensor(1.0500, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4376, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(0.0035, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5000, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1338, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(-0.0035, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.198362350463867, gan_loss=1.5625, rec_log={'train/total_loss': tensor(16.1984, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.4141, device='cuda:0'), 'train/nll_loss': tensor(1.8073, device='cuda:0'), 'train/rec_loss': tensor(0.9357, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3083, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0747, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2119, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0747, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.24891471862793, gan_loss=1.59375, rec_log={'train/total_loss': tensor(16.2489, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.4116, device='cuda:0'), 'train/nll_loss': tensor(1.8455, device='cuda:0'), 'train/rec_loss': tensor(0.9763, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4738, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0172, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4395, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0172, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.19917106628418, gan_loss=1.625, rec_log={'train/total_loss': tensor(16.1992, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.4167, device='cuda:0'), 'train/nll_loss': tensor(1.8153, device='cuda:0'), 'train/rec_loss': tensor(0.9414, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3978, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0825, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6250, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4766, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0825, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.74988842010498, gan_loss=1.5234375, rec_log={'train/total_loss': tensor(15.7499, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.8967, device='cuda:0'), 'train/nll_loss': tensor(1.8690, device='cuda:0'), 'train/rec_loss': tensor(0.9946, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2987, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0527, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5234, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1367, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0527, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.058815002441406, gan_loss=1.578125, rec_log={'train/total_loss': tensor(16.0588, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.1834, device='cuda:0'), 'train/nll_loss': tensor(1.9043, device='cuda:0'), 'train/rec_loss': tensor(1.0323, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3907, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0737, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2559, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0737, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.464344024658203, gan_loss=1.5859375, rec_log={'train/total_loss': tensor(16.4643, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.6308, device='cuda:0'), 'train/nll_loss': tensor(1.8947, device='cuda:0'), 'train/rec_loss': tensor(1.0232, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5449, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.1123, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5859, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3789, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.1123, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.942420959472656, gan_loss=1.5546875, rec_log={'train/total_loss': tensor(15.9424, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.0738, device='cuda:0'), 'train/nll_loss': tensor(1.8736, device='cuda:0'), 'train/rec_loss': tensor(1.0075, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4452, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0112, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5547, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3574, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0112, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.01962661743164, gan_loss=1.546875, rec_log={'train/total_loss': tensor(15.0196, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.1396, device='cuda:0'), 'train/nll_loss': tensor(1.8911, device='cuda:0'), 'train/rec_loss': tensor(1.0237, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3977, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0277, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2598, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0277, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.886104583740234, gan_loss=1.578125, rec_log={'train/total_loss': tensor(15.8861, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.0443, device='cuda:0'), 'train/nll_loss': tensor(1.8552, device='cuda:0'), 'train/rec_loss': tensor(0.9908, device='cuda:0'), 'train/perception_loss': tensor(0.8633, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3256, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0410, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2930, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0410, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.66497230529785, gan_loss=1.5546875, rec_log={'train/total_loss': tensor(16.6650, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.8091, device='cuda:0'), 'train/nll_loss': tensor(1.8635, device='cuda:0'), 'train/rec_loss': tensor(0.9969, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4704, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0161, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5547, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3496, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0161, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.870291709899902, gan_loss=1.6015625, rec_log={'train/total_loss': tensor(15.8703, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.0491, device='cuda:0'), 'train/nll_loss': tensor(1.8361, device='cuda:0'), 'train/rec_loss': tensor(0.9546, device='cuda:0'), 'train/perception_loss': tensor(0.8828, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3473, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0430, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6016, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3496, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0430, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.117626190185547, gan_loss=1.53125, rec_log={'train/total_loss': tensor(16.1176, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.2560, device='cuda:0'), 'train/nll_loss': tensor(1.8839, device='cuda:0'), 'train/rec_loss': tensor(1.0124, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3888, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0571, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5312, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2324, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0571, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.594987869262695, gan_loss=1.59375, rec_log={'train/total_loss': tensor(16.5950, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.8397, device='cuda:0'), 'train/nll_loss': tensor(1.7807, device='cuda:0'), 'train/rec_loss': tensor(0.9129, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3503, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0728, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4023, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0728, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.16124725341797, gan_loss=1.578125, rec_log={'train/total_loss': tensor(16.1612, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.2611, device='cuda:0'), 'train/nll_loss': tensor(1.9229, device='cuda:0'), 'train/rec_loss': tensor(1.0488, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4783, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0476, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3516, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0476, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.84251880645752, gan_loss=1.53125, rec_log={'train/total_loss': tensor(15.8425, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.0355, device='cuda:0'), 'train/nll_loss': tensor(1.8381, device='cuda:0'), 'train/rec_loss': tensor(0.9668, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2704, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.1152, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5312, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1396, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.1152, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.679706573486328, gan_loss=1.5625, rec_log={'train/total_loss': tensor(15.6797, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.8338, device='cuda:0'), 'train/nll_loss': tensor(1.8738, device='cuda:0'), 'train/rec_loss': tensor(0.9999, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3263, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0854, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1641, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0854, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.772306442260742, gan_loss=1.5625, rec_log={'train/total_loss': tensor(15.7723, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.8668, device='cuda:0'), 'train/nll_loss': tensor(1.9201, device='cuda:0'), 'train/rec_loss': tensor(1.0425, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3164, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0461, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2051, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0461, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.999387741088867, gan_loss=1.578125, rec_log={'train/total_loss': tensor(15.9994, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.2045, device='cuda:0'), 'train/nll_loss': tensor(1.8102, device='cuda:0'), 'train/rec_loss': tensor(0.9400, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2934, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0522, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3516, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0522, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.19933319091797, gan_loss=1.53125, rec_log={'train/total_loss': tensor(16.1993, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.2837, device='cuda:0'), 'train/nll_loss': tensor(1.9208, device='cuda:0'), 'train/rec_loss': tensor(1.0449, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5573, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0093, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5312, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3145, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0093, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.5874080657959, gan_loss=1.609375, rec_log={'train/total_loss': tensor(16.5874, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.7693, device='cuda:0'), 'train/nll_loss': tensor(1.8267, device='cuda:0'), 'train/rec_loss': tensor(0.9571, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3275, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0262, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6094, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4805, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0262, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=14.605114936828613, gan_loss=1.5625, rec_log={'train/total_loss': tensor(14.6051, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(12.7147, device='cuda:0'), 'train/nll_loss': tensor(1.9006, device='cuda:0'), 'train/rec_loss': tensor(1.0300, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2010, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0508, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1738, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0508, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.521587371826172, gan_loss=1.59375, rec_log={'train/total_loss': tensor(15.5216, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6296, device='cuda:0'), 'train/nll_loss': tensor(1.9026, device='cuda:0'), 'train/rec_loss': tensor(1.0237, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2839, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0376, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2236, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0376, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.16251564025879, gan_loss=1.625, rec_log={'train/total_loss': tensor(16.1625, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.3099, device='cuda:0'), 'train/nll_loss': tensor(1.8676, device='cuda:0'), 'train/rec_loss': tensor(0.9943, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3958, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0378, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6250, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.5391, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0378, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.588321685791016, gan_loss=1.59375, rec_log={'train/total_loss': tensor(16.5883, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.8360, device='cuda:0'), 'train/nll_loss': tensor(1.7708, device='cuda:0'), 'train/rec_loss': tensor(0.8993, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3442, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0540, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3145, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0540, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.56926155090332, gan_loss=1.5, rec_log={'train/total_loss': tensor(16.5693, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.7175, device='cuda:0'), 'train/nll_loss': tensor(1.8657, device='cuda:0'), 'train/rec_loss': tensor(0.9927, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4492, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0310, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5000, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1943, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0310, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.655412673950195, gan_loss=1.53125, rec_log={'train/total_loss': tensor(16.6554, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.7413, device='cuda:0'), 'train/nll_loss': tensor(1.9270, device='cuda:0'), 'train/rec_loss': tensor(1.0538, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5651, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0228, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5312, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3242, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0228, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.44652557373047, gan_loss=1.609375, rec_log={'train/total_loss': tensor(16.4465, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.6617, device='cuda:0'), 'train/nll_loss': tensor(1.8424, device='cuda:0'), 'train/rec_loss': tensor(0.9717, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4772, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.1206, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6094, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4316, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.1206, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.711933135986328, gan_loss=1.5625, rec_log={'train/total_loss': tensor(15.7119, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.8488, device='cuda:0'), 'train/nll_loss': tensor(1.8772, device='cuda:0'), 'train/rec_loss': tensor(0.9985, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3824, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0369, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3340, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0369, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.075032234191895, gan_loss=1.6484375, rec_log={'train/total_loss': tensor(15.0750, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.1615, device='cuda:0'), 'train/nll_loss': tensor(1.9267, device='cuda:0'), 'train/rec_loss': tensor(1.0489, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2121, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0618, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6484, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4141, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0618, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.74088478088379, gan_loss=1.5, rec_log={'train/total_loss': tensor(16.7409, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.8081, device='cuda:0'), 'train/nll_loss': tensor(1.9208, device='cuda:0'), 'train/rec_loss': tensor(1.0458, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5735, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(0.0209, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5000, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3086, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(-0.0209, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.02460479736328, gan_loss=1.578125, rec_log={'train/total_loss': tensor(16.0246, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.1984, device='cuda:0'), 'train/nll_loss': tensor(1.8482, device='cuda:0'), 'train/rec_loss': tensor(0.9821, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3128, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0703, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3594, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0703, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.582182884216309, gan_loss=1.5859375, rec_log={'train/total_loss': tensor(15.5822, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6973, device='cuda:0'), 'train/nll_loss': tensor(1.8950, device='cuda:0'), 'train/rec_loss': tensor(1.0176, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2752, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0366, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5859, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3438, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0366, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.56567668914795, gan_loss=1.59375, rec_log={'train/total_loss': tensor(15.5657, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6762, device='cuda:0'), 'train/nll_loss': tensor(1.9033, device='cuda:0'), 'train/rec_loss': tensor(1.0298, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3160, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0437, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3340, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0437, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.564979553222656, gan_loss=1.5625, rec_log={'train/total_loss': tensor(16.5650, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.7173, device='cuda:0'), 'train/nll_loss': tensor(1.8626, device='cuda:0'), 'train/rec_loss': tensor(0.9813, device='cuda:0'), 'train/perception_loss': tensor(0.8828, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4267, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0349, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3008, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0349, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.081840515136719, gan_loss=1.546875, rec_log={'train/total_loss': tensor(15.0818, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.2152, device='cuda:0'), 'train/nll_loss': tensor(1.8770, device='cuda:0'), 'train/rec_loss': tensor(1.0000, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.1992, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0518, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1338, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0518, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.960209846496582, gan_loss=1.59375, rec_log={'train/total_loss': tensor(15.9602, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.0619, device='cuda:0'), 'train/nll_loss': tensor(1.9428, device='cuda:0'), 'train/rec_loss': tensor(1.0630, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3701, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.1201, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3203, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.1201, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.735733985900879, gan_loss=1.5546875, rec_log={'train/total_loss': tensor(15.7357, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.9202, device='cuda:0'), 'train/nll_loss': tensor(1.8171, device='cuda:0'), 'train/rec_loss': tensor(0.9492, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2808, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0054, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5547, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2041, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0054, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.385872840881348, gan_loss=1.59375, rec_log={'train/total_loss': tensor(15.3859, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.4938, device='cuda:0'), 'train/nll_loss': tensor(1.9062, device='cuda:0'), 'train/rec_loss': tensor(1.0379, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2738, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0515, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5938, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3066, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0515, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.18855857849121, gan_loss=1.578125, rec_log={'train/total_loss': tensor(16.1886, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.3092, device='cuda:0'), 'train/nll_loss': tensor(1.9026, device='cuda:0'), 'train/rec_loss': tensor(1.0302, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4012, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0579, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2520, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0579, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.516051292419434, gan_loss=1.609375, rec_log={'train/total_loss': tensor(15.5161, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6177, device='cuda:0'), 'train/nll_loss': tensor(1.9162, device='cuda:0'), 'train/rec_loss': tensor(1.0393, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3830, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0466, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6094, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3750, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0466, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.033668518066406, gan_loss=1.5546875, rec_log={'train/total_loss': tensor(16.0337, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.1393, device='cuda:0'), 'train/nll_loss': tensor(1.9053, device='cuda:0'), 'train/rec_loss': tensor(1.0269, device='cuda:0'), 'train/perception_loss': tensor(0.8789, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3914, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0281, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5547, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2871, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0281, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.919731140136719, gan_loss=1.6328125, rec_log={'train/total_loss': tensor(15.9197, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.1316, device='cuda:0'), 'train/nll_loss': tensor(1.8155, device='cuda:0'), 'train/rec_loss': tensor(0.9465, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2669, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.1025, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.6328, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3633, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.1025, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.746382713317871, gan_loss=1.578125, rec_log={'train/total_loss': tensor(15.7464, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.9406, device='cuda:0'), 'train/nll_loss': tensor(1.8127, device='cuda:0'), 'train/rec_loss': tensor(0.9379, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2989, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0229, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3184, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0229, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.593875885009766, gan_loss=1.546875, rec_log={'train/total_loss': tensor(16.5939, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.6929, device='cuda:0'), 'train/nll_loss': tensor(1.9176, device='cuda:0'), 'train/rec_loss': tensor(1.0357, device='cuda:0'), 'train/perception_loss': tensor(0.8828, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5418, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0308, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3418, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0308, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.753379821777344, gan_loss=1.5625, rec_log={'train/total_loss': tensor(16.7534, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.9166, device='cuda:0'), 'train/nll_loss': tensor(1.8674, device='cuda:0'), 'train/rec_loss': tensor(0.9906, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.5114, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0598, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3105, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0598, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=16.323841094970703, gan_loss=1.5625, rec_log={'train/total_loss': tensor(16.3238, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(14.5147, device='cuda:0'), 'train/nll_loss': tensor(1.8265, device='cuda:0'), 'train/rec_loss': tensor(0.9591, device='cuda:0'), 'train/perception_loss': tensor(0.8672, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3209, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0540, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5625, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2754, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0540, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.886569023132324, gan_loss=1.546875, rec_log={'train/total_loss': tensor(15.8866, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.9830, device='cuda:0'), 'train/nll_loss': tensor(1.9117, device='cuda:0'), 'train/rec_loss': tensor(1.0398, device='cuda:0'), 'train/perception_loss': tensor(0.8711, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4940, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0166, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.3223, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0166, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.494695663452148, gan_loss=1.578125, rec_log={'train/total_loss': tensor(15.4947, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.6061, device='cuda:0'), 'train/nll_loss': tensor(1.9072, device='cuda:0'), 'train/rec_loss': tensor(1.0340, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.4480, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0415, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5781, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.4180, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0415, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.175699234008789, gan_loss=1.5703125, rec_log={'train/total_loss': tensor(15.1757, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.3106, device='cuda:0'), 'train/nll_loss': tensor(1.8859, device='cuda:0'), 'train/rec_loss': tensor(1.0127, device='cuda:0'), 'train/perception_loss': tensor(0.8750, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.2825, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(-0.0737, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5703, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.1621, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(0.0737, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+video are found.
+<---------------> rec_loss=15.801530838012695, gan_loss=1.546875, rec_log={'train/total_loss': tensor(15.8015, device='cuda:0'), 'train/logvar': tensor(0., device='cuda:0'), 'train/kl_loss': tensor(13.9288, device='cuda:0'), 'train/nll_loss': tensor(1.8693, device='cuda:0'), 'train/rec_loss': tensor(0.9869, device='cuda:0'), 'train/perception_loss': tensor(0.8828, device='cuda:0', dtype=torch.bfloat16), 'train/d_weight': tensor(0.3688, device='cuda:0'), 'train/disc_factor': tensor(1.), 'train/g_loss': tensor(0.0094, device='cuda:0', dtype=torch.bfloat16), 'train/disc_loss': tensor(1.5469, device='cuda:0', dtype=torch.bfloat16), 'train/logits_real': tensor(-0.2656, device='cuda:0', dtype=torch.bfloat16), 'train/logits_fake': tensor(-0.0094, device='cuda:0', dtype=torch.bfloat16)} <------------------->
+slurmstepd: error: *** JOB 545207 ON scn62-10g CANCELLED AT 2026-10-28T15:35:31 ***

@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=train_video_vae
-#SBATCH --partition=airawatp        # The DGX GPU partition we found from sinfo
+#SBATCH --partition=airawatp
 #SBATCH --nodes=1                # We only need 1 DGX node
+#SBATCH --exclude=scn62-10g      # <----- next time you can remove this line.
 #SBATCH --gpus-per-node=2        # Request all 8 A100 GPUs on that node
 #SBATCH --cpus-per-task=4       # Request CPU cores to feed data to the GPUs
 #SBATCH --time=01:00:00          # 2 hours max (well under the 7-day limit)
@@ -14,11 +15,14 @@
 GPUS=2
 VIDEO_ANNO=/nlsasfs/home/hfgenai/mansav/z1-v2/annotation/class_5_math_white_board.jsonl
 RESOLUTION=256
-NUM_FRAMES=33   # 13 * context_size - 1 
+NUM_FRAMES=17   # 13 * context_size - 1 
 BATCH_SIZE=2
 CONTEXT_SIZE=2   # context parallel size, GPUS % CONTEXT_SIZE=0
 LPIPS_CKPT=/nlsasfs/home/hfgenai/mansav/z1-v2/PATH/vgg_lpips.pth
 
+# Add these two lines to force-kill zombie processes on the compute node before torchrun starts
+pkill -9 -u $USER -f python
+sleep 5
 
 # Run the inference script, making sure sp_group_size matches world_size
 torchrun --nproc-per-node=$GPUS \
@@ -51,7 +55,7 @@ torchrun --nproc-per-node=$GPUS \
     --epochs 100 \
     --iters_per_epoch 20000 \
     --print_freq 40 \
-    
+    --add_discriminator
 
     
 

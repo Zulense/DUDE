@@ -148,8 +148,6 @@ def initialize_context_parallel(context_parallel_size):
             _CONTEXT_PARALLEL_GROUP = group
             break
 
-
-
-
-
+def is_main_process():
+    return get_rank() == 0
 
